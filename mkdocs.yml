@@ -1,8 +1,43 @@
 site_name: My docs
+site_url: https://ncotti.github.io/documentation/
+docs_dir: docs
 
 nav:
   - Home: index.md
   - About: about.md
 
+  - GDB: 
+    - Home: gdb/index.md
+    - Tutorial: gdb/tutorial.md
+    - Reference: gdb/reference.md
+    - How-to Guides:
+      - How to create a gdb script: gdb/how-to-guides/how_to_create_a_gdb_script.md
+
 theme:
   name: material
+  features:
+    - navigation.tabs
+  palette: 
+    # Palette toggle for light mode
+    - scheme: default
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
